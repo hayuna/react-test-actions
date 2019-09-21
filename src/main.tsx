@@ -8,7 +8,6 @@ const rootElement = document.getElementById('root')!;
 function renderApp() {
   render(<App />, rootElement);
 }
-
 renderApp();
 
 serviceWorker.unregister();
