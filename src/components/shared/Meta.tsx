@@ -41,26 +41,26 @@ const Meta = (props: Props) => {
 
   return (
     <Helmet>
-      <html prefix="og: http://ogp.me/ns#" lang="vi" />
-      <meta name="author" content={props.author || t('author')} />
-      <meta name="description" content={props.description || t('description')} />
-      {props.keyWords && <meta name="keywords" content={props.keyWords.join(',')} />}
-      <meta name="robots" content={props.robots || t('robots')} />
+      <html prefix='og: http://ogp.me/ns#' lang='vi' />
+      <meta name='author' content={props.author || t('author')} />
+      <meta name='description' content={props.description || t('description')} />
+      {props.keyWords && <meta name='keywords' content={props.keyWords.join(',')} />}
+      <meta name='robots' content={props.robots || t('robots')} />
 
-      <meta property="og:type" content={props.type || t('type')} />
-      <meta property="og:title" content={getTitle()} />
-      <meta property="og:url" content={getUrl()} />
-      <meta property="og:image" content={props.image || t('image')} />
-      <meta name="twitter:card" content={props.twitterCard || t('twitterCard')} />
+      <meta property='og:type' content={props.type || t('type')} />
+      <meta property='og:title' content={getTitle()} />
+      <meta property='og:url' content={getUrl()} />
+      <meta property='og:image' content={props.image || t('image')} />
+      <meta name='twitter:card' content={props.twitterCard || t('twitterCard')} />
 
-      <meta property="og:site_name" content={t('fullTitle')} />
-      <meta name="twitter:image:alt" content={props.image || t('image')} />
+      <meta property='og:site_name' content={t('fullTitle')} />
+      <meta name='twitter:image:alt' content={props.image || t('image')} />
 
-      <meta property="fb:app_id" content={t('fbAppId')} />
-      <meta name="twitter:site" content={t('twitterSite')} />
+      <meta property='fb:app_id' content={t('fbAppId')} />
+      <meta name='twitter:site' content={t('twitterSite')} />
 
       <title>{getTitle()}</title>
-      <link rel="canonical" href={getUrl()} />
+      <link rel='canonical' href={getUrl()} />
     </Helmet>
   );
 };

@@ -7,32 +7,32 @@ import {
   PowerSettingsNewOutlined,
   FullscreenOutlined,
   ChevronLeftOutlined,
-  ChevronRightOutlined
+  ChevronRightOutlined,
 } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) => ({
   drawer: {
     width: theme.spacing(32),
-    flexShrink: 0
+    flexShrink: 0,
   },
   drawerOpen: {
     width: theme.spacing(32),
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
+      duration: theme.transitions.duration.enteringScreen,
+    }),
   },
   drawerClose: {
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
+      duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1
+    width: theme.spacing(7) + 1,
   },
   toolbar: theme.mixins.toolbar,
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   footer: {
     display: 'flex',
@@ -46,10 +46,10 @@ const useStyles = makeStyles((theme: Theme) => ({
       height: theme.spacing(5),
 
       '&:hover': {
-        backgroundColor: 'rgba(255, 255, 255, 0.08'
-      }
-    }
-  }
+        backgroundColor: 'rgba(255, 255, 255, 0.08',
+      },
+    },
+  },
 }));
 
 type Props = {
@@ -63,16 +63,16 @@ const Sidebar = (props: Props) => {
 
   return (
     <Drawer
-      variant="permanent"
+      variant='permanent'
       className={clsx(classes.drawer, {
         [classes.drawerOpen]: props.open,
-        [classes.drawerClose]: !props.open
+        [classes.drawerClose]: !props.open,
       })}
       classes={{
         paper: clsx({
           [classes.drawerOpen]: props.open,
-          [classes.drawerClose]: !props.open
-        })
+          [classes.drawerClose]: !props.open,
+        }),
       }}
       open={props.open}
     >
@@ -90,9 +90,7 @@ const Sidebar = (props: Props) => {
             <FullscreenOutlined />
           </Button>
         )}
-        <Button onClick={props.toggle}>
-          {props.open ? <ChevronLeftOutlined /> : <ChevronRightOutlined />}
-        </Button>
+        <Button onClick={props.toggle}>{props.open ? <ChevronLeftOutlined /> : <ChevronRightOutlined />}</Button>
       </div>
     </Drawer>
   );

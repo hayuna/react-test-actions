@@ -11,16 +11,16 @@ const routes: RouteConfig[] = [
       {
         path: '/',
         exact: true,
-        component: HomePage
+        component: HomePage,
       },
       {
-        component: NotFoundPage
-      }
-    ]
+        component: NotFoundPage,
+      },
+    ],
   },
   {
-    component: NotFoundPage
-  }
+    component: NotFoundPage,
+  },
 ];
 
 export default routes;

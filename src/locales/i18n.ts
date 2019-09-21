@@ -7,8 +7,8 @@ const resources = {
     component__shared__header: require('locales/en/components/shared/header.json'),
     component__shared__sidebar: require('locales/en/components/shared/sidebar.json'),
     page__home: require('locales/en/pages/home.json'),
-    page__not_found: require('locales/en/pages/not-found.json')
-  }
+    page__not_found: require('locales/en/pages/not-found.json'),
+  },
 };
 
 i18n.use(initReactI18next).init({
@@ -17,8 +17,8 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'en',
   keySeparator: '.',
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 });
 
 export default i18n;

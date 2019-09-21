@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: `calc(100vh - ${theme.mixins.toolbar.minHeight}px - ${theme.spacing(4)}px)`,
     justifyContent: 'center',
     alignItems: 'center',
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
   },
   main: {
     height: '240px',
-    width: '320px'
+    width: '320px',
   },
   card: {
     position: 'relative',
@@ -26,11 +26,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: 'transparent',
     boxShadow: 'none',
     color: theme.palette.primary.main,
-    textShadow: '1px 2px 3px #ccc'
+    textShadow: '1px 2px 3px #ccc',
   },
   homeButton: {
-    marign: '0 auto'
-  }
+    marign: '0 auto',
+  },
 }));
 
 interface Props {
@@ -45,16 +45,16 @@ const NotFound = (props: Props) => {
     <>
       <Helmet>
         <title>{t('pageTitle')}</title>
-        <meta name="description" content={t('pageDescription')} />
+        <meta name='description' content={t('pageDescription')} />
       </Helmet>
       <section className={classes.root}>
         <section className={classes.main}>
           <Card className={classes.card}>
             <CardContent>
-              <Typography variant="h4" component="h1">
+              <Typography variant='h4' component='h1'>
                 {t('txtNotFound')}
               </Typography>
-              <Typography variant="h6" component="h2">
+              <Typography variant='h6' component='h2'>
                 {t('txtNoMatch')} <code>{props.location.pathname}</code>
               </Typography>
             </CardContent>

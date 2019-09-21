@@ -16,7 +16,7 @@ import routes from './routes';
 const baseUrl = process.env.PUBLIC_URL || '';
 const generateClassName = createGenerateClassName({
   disableGlobal: true,
-  productionPrefix: 's'
+  productionPrefix: 's',
 });
 
 const App = () => (

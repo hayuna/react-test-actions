@@ -30,10 +30,10 @@ const slugify = (text: string, separator?: string) => {
     { to: 'x', from: '[ẍ]' },
     { to: 'y', from: '[ÝŶŸỲỴỶỸ]' },
     { to: 'z', from: '[ŹŻŽ]' },
-    { to: '-', from: "[.·/_,:;']" }
+    { to: '-', from: "[.·/_,:;']" },
   ];
 
-  sets.forEach(set => {
+  sets.forEach((set) => {
     text = text.replace(new RegExp(set.from, 'gi'), set.to);
   });
 

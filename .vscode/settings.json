@@ -31,10 +31,11 @@
       "autoFix": true
     }
   ],
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onType",
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "debug.node.autoAttach": "off",
-  "prettier.printWidth": 100,
-  "prettier.tabWidth": 2,
-  "prettier.semi": true,
-  "prettier.singleQuote": true
+  "debug.node.autoAttach": "off"
 }

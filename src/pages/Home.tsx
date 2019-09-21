@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Helmet>
         <title>{t('pageTitle')}</title>
-        <meta name="description" content={t('pageDescription')} />
+        <meta name='description' content={t('pageDescription')} />
       </Helmet>
       Home Page
     </>

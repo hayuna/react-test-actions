@@ -3,16 +3,16 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 let theme = createMuiTheme({
   props: {
     MuiButtonBase: {
-      disableRipple: true
-    }
+      disableRipple: true,
+    },
   },
   palette: {
     primary: {
       light: '#589ffc',
       main: '#3e8ef7',
       dark: '#247cf0',
-      contrastText: '#fff'
-    }
+      contrastText: '#fff',
+    },
   },
   typography: {
     fontFamily: '"Muli", sans-serif',
@@ -20,12 +20,12 @@ let theme = createMuiTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 600,
     button: {
-      textTransform: 'none'
-    }
+      textTransform: 'none',
+    },
   },
   shape: {
-    borderRadius: 0
-  }
+    borderRadius: 0,
+  },
 });
 
 theme = {
@@ -33,10 +33,10 @@ theme = {
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: '#18202c'
-      }
-    }
-  }
+        backgroundColor: '#18202c',
+      },
+    },
+  },
 };
 
 export default theme;

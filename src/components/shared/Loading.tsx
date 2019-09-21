@@ -7,12 +7,12 @@ const useStyles = makeStyles({
     alignItems: 'center',
     display: 'flex',
     height: '100vh',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   loading: {
     height: 64,
-    width: 64
-  }
+    width: 64,
+  },
 });
 
 const Loading = memo(() => {

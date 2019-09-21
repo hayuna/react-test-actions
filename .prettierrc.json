@@ -1,0 +1,15 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 120,
+  "tabWidth": 2,
+  "jsxSingleQuote": true,
+  "bracesSpacing": true,
+  "autoScroll": true,
+  "arrowParens": "always",
+  "bracketSpecing": true,
+  "openOutput": true,
+  "statusBar": true,
+  "trailingComma": "all",
+  "useTabs": false
+}

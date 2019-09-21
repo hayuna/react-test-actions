@@ -8,12 +8,12 @@ module.exports = function(api) {
         targets: {
           browsers: isDevEnv
             ? ['last 1 chrome version', 'last 1 firefox version', 'last 1 safari version']
-            : ['>0.2%', 'not dead', 'not op_mini all']
-        }
-      }
+            : ['>0.2%', 'not dead', 'not op_mini all'],
+        },
+      },
     ],
     '@babel/preset-typescript',
-    '@babel/preset-react'
+    '@babel/preset-react',
   ];
 
   const plugins = [
@@ -31,29 +31,29 @@ module.exports = function(api) {
           transform: function(importName) {
             return `@material0ui/core/${importName}`;
           },
-          preventFullImport: true
+          preventFullImport: true,
         },
         '@material-ui/lab': {
           transform: function(importName) {
             return `@material-ui/lab/${importName}`;
           },
-          preventFullImport: true
+          preventFullImport: true,
         },
         '@material-ui/styles': {
           transform: function(importName) {
             return `@material-ui/styles/${importName}`;
           },
-          preventFullImport: true
+          preventFullImport: true,
         },
         '@material-ui/icons': {
           transform: function(importName) {
             return `@material-ui/icons/${importName}`;
           },
-          preventFullImport: true
-        }
-      }
+          preventFullImport: true,
+        },
+      },
     ],
-    isDevEnv && 'react-hot-loader/babel'
+    isDevEnv && 'react-hot-loader/babel',
   ].filter(Boolean);
 
   return { presets, plugins };
