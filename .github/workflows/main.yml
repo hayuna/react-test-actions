@@ -9,9 +9,9 @@ jobs:
       matrix:
         node_version: [10, 12]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup@v1
+      uses: actions/setup@master
       with:
         version: ${{ matrix.node_version }}
     - name: yarn install, yarn list, yarn test, yarn build
