@@ -1,0 +1,23 @@
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+
+const {{pascalCase name}} = () => {
+    {{#id path}}
+        const [t] = useTranslation('page__{{snakeCase name}}');
+    {{else}}
+        const [t] = useTranslation('page__{{snakeCase path}}__{{snakeCase name}}');
+    {{/if}}
+
+    return (
+        <>
+            <Helmet>
+                <title>{t('pageTitle')}</title>
+                <meta name="description" content={t('pageDescription')} />
+            </Helmet>
+            {{titleCase pageTitle}}
+        </>
+    );
+};
+
+export default {{pascalCase name}}
