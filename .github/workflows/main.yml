@@ -1,22 +1,37 @@
-name: CI
+# name: CI
+# on: [push]
+
+# jobs:
+#   build:
+#     name: Build
+#     runs-on: ubuntu-18.04
+#     strategy:
+#       matrix:
+#         node_version: [10, 12]
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: Use Node.js ${{ matrix.node_version }}
+#       uses: actions/setup@master
+#       with:
+#         version: ${{ matrix.node_version }}
+#     - name: yarn install, yarn list, yarn test, yarn build
+#       run: |
+#         yarn install
+#         yarn lint
+#         yarn test
+#         yarn build
 on: [push]
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        node_version: [10, 12]
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup@master
+    - name: Hello world action step
+      id: hello
+      uses: actions/hello-world-javascript-action@v1
       with:
-        version: ${{ matrix.node_version }}
-    - name: yarn install, yarn list, yarn test, yarn build
-      run: |
-        yarn install
-        yarn lint
-        yarn test
-        yarn build
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
