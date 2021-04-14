@@ -11,8 +11,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-        - run: apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        - run: apt-add-repository https://cli.github.com/packages
-        - run: apt update
-        - run: apt install gh
+      - run: apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+      - run: apt-add-repository https://cli.github.com/packages
+      - run: apt update
+      - run: apt install gh
       
