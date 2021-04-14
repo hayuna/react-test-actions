@@ -11,3 +11,11 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           branch-prefix: "TICKET-"
+      - uses: kentaro-m/qr-code-commenter-action@v0.1.2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          content: https://blog.kentarom.com/
+          comment: |
+            :lock: This is a QR code for access to the preview website.
+            :iphone: Scan a code with your device.
+            {qrcode}
