@@ -1,6 +1,6 @@
 name: 'Issue Reference'
 on: 
-  issue:
+  issues:
     types: [opened]
 
 jobs:
