@@ -15,4 +15,5 @@ jobs:
       - run: sudo apt-add-repository https://cli.github.com/packages
       - run: sudo apt update
       - run: sudo apt install gh
+      - run: gh issue list
       
